@@ -1,0 +1,11 @@
+<odoo>
+  <record id="action_shared_contact" model="ir.actions.act_window">
+    <field name="name">Shared Contacts</field>
+    <field name="res_model">shared.contact</field>
+    <field name="view_mode">list,form</field>
+  </record>
+
+  <menuitem id="menu_shared_contact_root" name="Shared Contacts"
+            parent="contacts.menu_contacts"
+            action="action_shared_contact"/>
+</odoo>

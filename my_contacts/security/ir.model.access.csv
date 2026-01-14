@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_shared_contact_user,shared.contact user,model_shared_contact,base.group_user,1,1,1,0
+access_shared_contact_manager,shared.contact manager,model_shared_contact,base.group_system,1,1,1,1
+access_shared_contact_link_user,shared.contact.link user,model_shared_contact_link,base.group_user,1,1,1,0
+access_shared_contact_link_manager,shared.contact.link manager,model_shared_contact_link,base.group_system,1,1,1,1

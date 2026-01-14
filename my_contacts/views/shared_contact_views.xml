@@ -1,0 +1,49 @@
+<odoo>
+  <record id="view_shared_contact_list" model="ir.ui.view">
+    <field name="name">shared.contact.list</field>
+    <field name="model">shared.contact</field>
+    <field name="arch" type="xml">
+      <list editable="bottom">
+        <field name="name"/>
+        <field name="title"/>
+        <field name="phone"/>
+        <field name="mobile"/>
+        <field name="email"/>
+        <field name="active"/>
+        <button name="action_open_detail" type="object" string="Detail"/>
+      </list>
+    </field>
+  </record>
+
+  <record id="view_shared_contact_form" model="ir.ui.view">
+    <field name="name">shared.contact.form</field>
+    <field name="model">shared.contact</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="title"/>
+          </group>
+          <group>
+            <field name="phone"/>
+            <field name="mobile"/>
+            <field name="email"/>
+          </group>
+          <group>
+            <field name="client_link_ids">
+              <list editable="bottom">
+                <field name="partner_id"/>
+                <field name="is_primary"/>
+                <field name="role_title"/>
+                <field name="note"/>
+              </list>
+            </field>
+          </group>
+<!--          <field name="note"/>-->
+          <field name="active"/>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>

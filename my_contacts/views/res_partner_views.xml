@@ -1,0 +1,24 @@
+<odoo>
+  <record id="view_partner_form_inherit_shared_contacts" model="ir.ui.view">
+    <field name="name">res.partner.form.shared.contacts</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//notebook" position="inside">
+        <page string="Shared Contacts" groups="base.group_user">
+          <field name="shared_contact_link_ids" context="{'default_partner_id': id}">
+            <list editable="bottom">
+              <field name="contact_id"/>
+              <field name="is_primary"/>
+              <field name="role_title"/>
+              <field name="note"/>
+              <field name="contact_phone" readonly="1"/>
+              <field name="contact_mobile" readonly="1"/>
+              <field name="contact_email" readonly="1"/>
+            </list>
+          </field>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>
